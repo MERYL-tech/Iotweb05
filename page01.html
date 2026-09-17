@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page01</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&family=Monomaniac+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- แต่งด้วย tailwindCSS -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+
+    <!-- ตั้งค่า google font ใช้กับ TailwindCSS-->
+     <script>
+     tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            itim: ["Itim"],
+            monomaniac: ["Monomaniac One"],
+          },
+        },
+      },
+     }
+     </script>
+  </head>
+
+
+  <body class="bg-black">
+    <div class="w-full flex flex-col items-center">
+      <!-- ส่วนของ navbar -->
+      <div class="flex w-full mt-5 py-5 px-[100px]">
+        <!-- เมนูต่างๆ ชิดซ้าย -->
+        <div class="w-full flex just-start gap-8">
+          <a href="#" class="text-white text-xl font-monomaniac font-bold">Portfolio</a>
+          <a href="#" class="text-white text-xl font-monomaniac font-bold">About Me</a>
+          <a href="#" class="text-white text-xl font-monomaniac font-bold">Get In Touch</a>
+        </div>
+        <!-- ข้อความ Hello อยู่ตรงกลาง -->
+        <div class="w-full flex justify-center">
+          <span class="text-green-400 text-4xl font-itim">hello</span>
+        </div>
+        <!-- ไอคอนต่างๆ ชิดขวา -->
+        <div class="w-full flex justify-end gap-3">
+          <a href="#"class="text-white text-xl"><i class="bi bi-github"></i></a>
+          <a href="#"class="text-white text-xl"><i class="bi bi-instagram"></i></a>
+          <a href="#"class="text-white text-xl"><i class="bi bi-twitter"></i></a>
+          <a href="#"class="text-white text-xl"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- ส่วนของ personal info -->
+      <div class="flex flex-col items-center mt-12">
+        <span class="text-white text-5xl mt-[35px] font-monomaniac">S6819M10016</span>
+        <span class="text-white text-5xl mt-5 font-monomaniac">PONGSAKORN MUANGPAN</span>
+        <span class="text-green-400 text-5xl mt-5 font-monomaniac">Freelance Web Devloper</span>
+        <span class="text-white text-5xl mt-5 font-monomaniac">Based In THAILAND</span>
+      </div>
+
+      <!-- ส่วนของ personal picture -->
+      <div class="mt-[100px]">
+        <img class = "w-[300px] h-[300px] object-cover border-4 border-green-400
+        p-3 rounded-full"
+        src="./images/person.jpg" alt="person" />
+      </div>
+    </div>
+  </body>
+</html>
