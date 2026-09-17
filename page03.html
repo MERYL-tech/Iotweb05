@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page03</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <!-- Font Awesome (สำหรับไอคอน fa-play ตามต้นฉบับ) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <!-- เรียกใช้ Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <!-- ตั้งค่าตัวแปรสีและฟอนต์พื้นฐาน (แทน CSS Variables เดิม) -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              mainbg: '#01014d',
+              navbg: '#040924',
+              primary: '#8fa5f9',
+              primaryHover: '#7a93f5',
+              muted: '#a0a5ba',
+              borderDim: 'rgba(255, 255, 255, 0.05)',
+              borderTag: '#1e2646',
+              borderContact: '#1a2035'
+            },
+            fontFamily: {
+              bebas: ['"Bebas Neue"', 'cursive'],
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-mainbg text-white font-bebas leading-[1.6] m-0 p-0 box-border">
+    <!-- แถบนำทาง (Navbar) -->
+    <header class="flex justify-between items-center py-[20px] px-[30px] bg-navbg">
+      <div class="font-[800] text-[1.2rem] tracking-[1.5px]">PONGSAKORN MUANGPAN</div>
+      <nav>
+        <a href="#work" class="ml-[30px] text-[1.1rem] font-[300] text-white no-underline hover:text-primary transition duration-300">Work</a>
+        <a href="#about" class="ml-[30px] text-[1.1rem] font-[300] text-white no-underline hover:text-primary transition duration-300">About</a>
+        <a href="#contact" class="ml-[30px] text-[1.1rem] font-[300] text-white no-underline hover:text-primary transition duration-300">Contact</a>
+      </nav>
+    </header>
+
+    <main class="max-w-[1100px] mx-auto px-[30px]">
+      <!-- ส่วนที่ 1: แนะนำตัว (Hero Section) -->
+      <section class="flex flex-col md:flex-row items-center justify-between py-[60px] pb-[100px] gap-[50px]" id="work">
+        <div class="flex-1">
+          <h1 class="text-[3rem] md:text-[4rem] leading-[1.1] mb-[20px] uppercase font-[800]">HI, I AM<br />PONGSAKORN M.</h1>
+          <p class="text-muted text-[1rem] mb-[40px] max-w-[400px]">
+            นักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์จากประเทศไทย
+            ที่มีความหลงใหลในการสร้าง เว็บไซต์ที่เข้าถึงได้และเป็นมิตรกับผู้ใช้
+          </p>
+          <div class="flex items-center">
+            <a href="#contact" class="inline-block py-[10px] px-[24px] rounded-[30px] font-[700] text-[1.1rem] uppercase transition duration-300 bg-primary text-navbg hover:bg-primaryHover no-underline"
+              >CONTACT ME &nbsp; • <i class="fa-solid fa-play"></i
+            ></a>
+            <a href="#" class="inline-flex justify-center items-center w-[40px] h-[40px] ml-[15px] text-muted text-[1.5rem] hover:text-primary transition duration-300"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="inline-flex justify-center items-center w-[40px] h-[40px] ml-[15px] text-muted text-[1.5rem] hover:text-primary transition duration-300"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center md:justify-end">
+          <img src="./images/King.jpg" alt="Pongsakorn" class="max-w-full rounded-[20px]" />
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 2: เกี่ยวกับฉัน (About Me) -->
+      <section class="grid grid-cols-1 md:grid-cols-[350px_1fr] gap-[40px] py-[80px] border-t border-borderDim" id="about">
+        <div class="relative">
+          <h1 class="text-[1.5rem] uppercase font-[800]">ABOUT ME</h1>
+        </div>
+        <div>
+          <h3 class="text-[1.4rem] mb-[20px] leading-[1.5] font-[600] normal-case">
+            ผมเป็นนักพัฒนาเว็บไซต์ฝั่งฟรอนท์เอนด์ที่ทำงานอยู่ในกรุงเทพฯ
+            กำลังมองหาโอกาสที่น่าตื่นเต้น ในการ ทำงานมีพื้นฐานการศึกษาด้าน
+            วิศวกรรมซอฟต์แวร์
+          </h3>
+          <p class="text-muted text-[0.95rem] mb-[30px]">
+            ชอบให้ความสำคัญกับการเข้าถึง (accessibility) เมื่อพัฒนาเว็บไซต์
+            มีความกระตือรือร้นและอยากรู้ อยากเห็นเกี่ยวกับการแก้ปัญหาต่างๆ
+            ปัจจุบันกำลังศึกษาเรียนรู้เกี่ยวกับ React.js และการออกแบบ
+            เว็บไซต์เล็กน้อยเมื่อไม่ได้เขียนโปรแกรม ดิฉัน/ผมชอบเล่นฟุตบอล
+            ถ่ายภาพ และเล่นเกม FIFA, Diablo
+            กำลังเรียนรู้เพิ่มเติมเพื่อพัฒนาทักษะอยู่เสมอ
+          </p>
+          <div class="flex items-center mb-[30px]">
+            <a href="#" class="inline-block py-[10px] px-[24px] rounded-[30px] font-[700] text-[1.1rem] uppercase transition duration-300 bg-primary text-navbg hover:bg-primaryHover no-underline"
+              >DOWNLOAD RESUME &nbsp;  •<i class="fa-solid fa-play"></i
+            ></a>
+            <a href="#" class="inline-flex justify-center items-center w-[40px] h-[40px] ml-[15px] text-muted text-[1.5rem] hover:text-primary transition duration-300"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="inline-flex justify-center items-center w-[40px] h-[40px] ml-[15px] text-muted text-[1.5rem] hover:text-primary transition duration-300"><i class="bi bi-github"></i></a>
+          </div>
+          <img src="./images/Dev.jpg" alt="Working" class="w-full rounded-[20px] mt-[20px]" />
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 3: ทักษะความสามารถ (My Capabilities) -->
+      <section class="grid grid-cols-1 md:grid-cols-[350px_1fr] gap-[40px] py-[80px] border-t border-borderDim">
+        <div class="relative">
+          <h1 class="text-[1.5rem] uppercase font-[800]">MY CAPABILITIES</h1>
+        </div>
+        <div>
+          <p class="text-muted mb-[30px]">
+            ผมมองหาโอกาสในการเพิ่มทักษะใหม่ๆ อยู่เสมอ ทั้งการพัฒนาฟรอนท์เอนด์
+            แบล็กเอนต์ การ ออกแบบ UX/UI ฐานข้อมูล
+          </p>
+          <div class="flex flex-wrap gap-[15px]">
+            <span class="border border-borderTag py-[10px] px-[25px] rounded-[30px] text-[0.85rem] font-[600] tracking-[1px] text-muted">HTML</span>
+            <span class="border border-borderTag py-[10px] px-[25px] rounded-[30px] text-[0.85rem] font-[600] tracking-[1px] text-muted">CSS</span>
+            <span class="border border-borderTag py-[10px] px-[25px] rounded-[30px] text-[0.85rem] font-[600] tracking-[1px] text-muted">JAVASCRIPT</span>
+            <span class="border border-borderTag py-[10px] px-[25px] rounded-[30px] text-[0.85rem] font-[600] tracking-[1px] text-muted">FLUTTER</span>
+            <span class="border border-borderTag py-[10px] px-[25px] rounded-[30px] text-[0.85rem] font-[600] tracking-[1px] text-muted">DART</span>
+            <span class="border border-borderTag py-[10px] px-[25px] rounded-[30px] text-[0.85rem] font-[600] tracking-[1px] text-muted">IoT</span>
+            <span class="border border-borderTag py-[10px] px-[25px] rounded-[30px] text-[0.85rem] font-[600] tracking-[1px] text-muted">REACT</span>
+            <span class="border border-borderTag py-[10px] px-[25px] rounded-[30px] text-[0.85rem] font-[600] tracking-[1px] text-muted">DATABASE</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 4: ประสบการณ์ (My Experience) -->
+      <section class="grid grid-cols-1 md:grid-cols-[350px_1fr] gap-[40px] py-[80px] border-t border-borderDim">
+        <div class="relative">
+          <h1 class="text-[1.5rem] uppercase font-[800]">MY EXPERIENCE</h1>
+        </div>
+        <div class="flex flex-col gap-[40px]">
+          <div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-[10px]">
+              <h3 class="normal-case text-[1.2rem] font-[800]">Freelance Developer</h3>
+              <span class="text-muted text-[0.85rem]">May 2023 - Present</span>
+            </div>
+            <p class="text-muted text-[0.95rem]">
+              พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้สำหรับเว็บแอปพลิเคชันโดยใช้
+              React.js ทำงานร่วมกับทีม ออกแบบ UX/UI
+              เพื่อสร้างประสบการณ์ผู้ใช้ที่น่าประทับใจปรับปรุงความเร็วในการโหลด
+              เว็บไซต์ด้วยเทคนิคการเพิ่มประสิทธิภาพต่างๆร่วมพัฒนาและดูแลไลบรารีคอมโพเนนต์ภายใน
+              องค์กร
+            </p>
+          </div>
+          <div>
+            <div class="flex flex-col md:flex-row md:justify-between md:items-baseline mb-[10px]">
+              <h3 class="normal-case text-[1.2rem] font-[800]">Front-End Intern</h3>
+              <span class="text-muted text-[0.85rem]">Aug 2022 - Jan 2023</span>
+            </div>
+            <p class="text-muted text-[0.95rem]">
+              พัฒนาเว็บไซต์ลูกค้าโดยใช้ HTML, CSS และ JavaScript
+              ช่วยปรับปรุงการเข้าถึง (Accessibility)
+              ของเว็บไซต์ให้สอดคล้องกับมาตรฐาน WCAG
+              ทำงานร่วมกับทีมแบ็คเอนด์เพื่อเชื่อมต่อ API
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ส่วนที่ 5: ติดต่อ (Contact) -->
+      <section
+        class="grid grid-cols-1 md:grid-cols-[350px_1fr] gap-[40px] py-[80px] border-t border-borderDim border-b border-borderContact pb-[80px]"
+        id="contact"
+      >
+        <div class="flex flex-col text-[1.5rem]">
+          <h1 class="uppercase font-[800]">LET'S CONNECT</h1>
+          <p class="text-muted my-[20px] text-[1.1rem]">
+            Say hello at schulz1669@gmail.com<br />For more info,here's my resume.
+          </p>
+          <div>
+            <a href="#" class="text-[1.2rem] mr-[20px] text-muted hover:text-primary transition duration-300"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-[1.2rem] mr-[20px] text-muted hover:text-primary transition duration-300"><i class="bi bi-github"></i></a>
+            <a href="#" class="text-[1.2rem] mr-[20px] text-muted hover:text-primary transition duration-300"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-[1.2rem] mr-[20px] text-muted hover:text-primary transition duration-300"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="w-full">
+          <form action="#">
+            <div class="mb-[20px]">
+              <label class="block text-[0.9rem] text-muted mb-[8px]">Name</label>
+              <input type="text" name="name" class="w-full bg-navbg border-b-2 border-transparent rounded-[5px] p-[15px] text-white outline-none focus:border-primary transition duration-300" />
+            </div>
+            <div class="mb-[20px]">
+              <label class="block text-[0.9rem] text-muted mb-[8px]">Email</label>
+              <input type="email" name="email" class="w-full bg-navbg border-b-2 border-transparent rounded-[5px] p-[15px] text-white outline-none focus:border-primary transition duration-300" />
+            </div>
+            <div class="mb-[20px]">
+              <label class="block text-[0.9rem] text-muted mb-[8px]">Subject</label>
+              <input type="text" name="subject" class="w-full bg-navbg border-b-2 border-transparent rounded-[5px] p-[15px] text-white outline-none focus:border-primary transition duration-300" />
+            </div>
+            <div class="mb-[20px]">
+              <label class="block text-[0.9rem] text-muted mb-[8px]">Message</label>
+              <textarea name="message" rows="4" class="w-full bg-navbg border-b-2 border-transparent rounded-[5px] p-[15px] text-white outline-none focus:border-primary transition duration-300"></textarea>
+            </div>
+            <button type="submit" class="inline-block py-[10px] px-[24px] rounded-[30px] font-[700] text-[1.1rem] uppercase transition duration-300 bg-primary text-navbg hover:bg-primaryHover border-none cursor-pointer">SUBMIT</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ส่วนท้าย (Footer) -->
+    <footer class="text-center p-[30px] text-[0.8rem] text-muted">
+      <p>© 2025, Created By SAU-Dev-Team</p>
+    </footer>
+  </body>
+</html>
