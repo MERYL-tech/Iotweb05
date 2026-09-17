@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet"/>
+    <!-- เรียกใช้ Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <!-- ตั้งค่าฟอนต์ใน Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ['"Roboto Mono"', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body class="m-0 p-0 font-roboto bg-[#91FFB2]">
+    <!-- ส่วนของ main div.main ได้เลย-->
+    <div class="flex mx-[150px] my-[80px] justify-center gap-[50px]">
+      
+      <!-- sec-left -->
+      <div class="left">
+        <span class="text-[5rem] font-bold block">My web Design by</span>
+        <!-- แก้ไข tag <sapn> เป็น <span> -->
+        <span class="text-[5rem] font-bold block">HTML+CSS+TailwindCSS</span>
+        <p class="w-[550px] text-[1.2rem] mb-[40px]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis in repudiandae modi. Dolor sint odit deserunt labore excepturi ullam inventore.</p>
+
+        <!-- ปรับสีพื้นหลังปุ่มจาก #3333 เป็น #333333 เพื่อให้เป็นโค้ดสี HEX ที่สมบูรณ์ -->
+        <button class="bg-[#333333] text-white py-[10px] px-[40px] rounded-[100px] cursor-pointer hover:bg-[#111111] transition-colors duration-300">Follow Me</button>
+        
+        <div class="mt-[50px] flex justify-between">
+          <a href="./page01.html"><img src="./images/pic1.png" alt="" class="w-[450px]"></a>
+          <a href="./page02.html"><img src="./images/pic2.png" alt="" class="w-[450px]"></a>
+        </div>
+      </div>
+
+      <!-- sec-center -->
+      <!-- จัดโครงสร้าง HTML ให้รูปภาพเข้าไปอยู่ใน div ให้ถูกต้อง -->
+      <div class="center">
+        <a href="./page03.html"><img src="./images/pic3.png" alt="" class="h-[763px]"></a>
+      </div>
+
+      <!-- sec-right -->
+      <!-- จัดโครงสร้าง HTML ให้รูปภาพเข้าไปอยู่ใน div ให้ถูกต้อง และลบ </div> ส่วนเกินออก -->
+      <div class="right">
+        <a href="./page04.html"><img src="./images/pic4.png" alt="" class="h-[763px]"></a>
+      </div>
+      
+    </div>
+
+    <!-- ส่วน footer  -->
+    <div class="flex flex-col items-center text-[1.2rem] mb-[50px]">
+      <span>Created by Pongsakorn SAU</span>
+      <span>Copyright © 2026 WoW WoW WoW</span>
+    </div>
+  </body>
+</html>
